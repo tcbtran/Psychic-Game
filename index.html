@@ -17,54 +17,11 @@
 	5. Set a counter for total number of guesses and guesses remaining.
 	6. Reset the page if user guesses correctly (win) or when counter reaches max. -->
 
-<!-- 	<script type"text/javascript" src="assets/javascript/game.js">
-	</script> -->
-
 	<div id="psychic_game">
 		<h1>The Psychic Game</h1>
 	</div>
 
-	<script type="text/javascript">
-
-		var letters = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "r", "x", "y", "z"];
-		var wins = 0;
-		var losses = 0;
-		var guesses = 10;
-
-		document.onkeyup = function() {
-			var userGuess = String.fromCharCode(event.keyCode).toLowerCase();
-			// console.log(userGuess);
-
-			var computerGuess = letters[Math.floor(Math.random() * letters.length)];
-			// console.log(computerGuess);
-
-		if (userGuess === computerGuess) {
-			// alert("Correct");
-			wins++;
-			console.log(wins);
-			guesses=10;
-			console.log(guesses);
-		}
-		
-		if ((userGuess !== computerGuess) && (guesses != 0)) {
-			// alert("Wrong");
-			guesses--;
-			console.log(guesses);
-			losses++;
-			console.log(losses);
-		}
-
-		else if ((userGuess !== computerGuess) && (guesses = 0)) {
-			// alert("Game Over");
-			guesses=10;
-		}
-
-		var html = "<p>Guess what letter I'm thinking of?</p>" + "<p>Wins: " + wins + "</p>" + "<p>Losses: " + losses + "</p>" + "<p>Guesses left: " + guesses + "</p>" + "<p>Your Guesses so far: " + userGuess + "</p>";
-
-		document.querySelector('#psychic_game').innerHTML = html;
-
-	}
-
+	<script type"text/javascript" src="assets/javascript/game.js">
 	</script>
 
 </body>
